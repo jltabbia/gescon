@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block titulo %}
+Editar Propietarios
+{% endblock %}
+{% block contenido %}
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="background:darkkhaki;">
+            Editar Propietarios
+        </div>
+        <div class="card-body" style="background:bisque;">
+          <h4 class="card-title">Datos del Propietario</h4>
+   
+           {% include "propietarios/form.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+$(document).ready(function() {
+
+};
+</script>
+{% endblock %}
+

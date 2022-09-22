@@ -1,0 +1,24 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+      <div class="form-group">
+          <label for="cuil">Nombre</label>
+          <input id="nombre" class="form-control" type="text" name="nombre" value="{{ propietario.nombre }}">
+      </div>
+      <div class="form-group">
+          <label for="domicilio">Domicilio</label>
+          <input id="domicilio" class="form-control" type="text" name="domicilio" value="{{ propietario.domicilio }}">
+      </div>
+      <div class="form-group">
+        <label for="cuit_cuil">CUIT/CUIL</label>
+        <input id="cuit_cuil" class="form-control" type="text" name="cuit_cuil" value="{{ propietario.cuit_cuil }}">
+      </div>
+        <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input id="email" class="form-control" type="text" name="email" value="{{ propietario.email }}">
+      </div>
+
+  <div class='mb-3 mt-3'>
+  <input class="btn btn-primary btn-sm" type="submit" value="Guardar">
+  <a href="{% url 'propietarios:home' %}" class='btn btn-sm btn-danger'>Cancelar</a>
+  </div>
+</form>
